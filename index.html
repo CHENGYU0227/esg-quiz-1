@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head><meta name="description" content="專案管理 大會考抽題測驗"><link rel="canonical" href="https://pages.kusesite.com/8xhfngwbhoej"><meta property="og:title" content="專案管理 大會考抽題測驗 - Kuse AI"><meta property="og:description" content="專案管理 大會考抽題測驗"><meta property="og:url" content="https://pages.kusesite.com/8xhfngwbhoej"><meta property="og:type" content="article"><meta property="og:site_name" content="Kuse AI"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="專案管理 大會考抽題測驗 - Kuse AI"><meta name="twitter:description" content="專案管理 大會考抽題測驗"><meta name="twitter:site" content="@kuseHQ">
+<head><meta name="description" content="隨機抽題測驗網站"><link rel="canonical" href="https://pages.kusesite.com/8xhfngwbhoej"><meta property="og:title" content="隨機抽題測驗網站"><meta property="og:description" content="隨機抽題測驗網站"><meta property="og:url" content="https://pages.kusesite.com/8xhfngwbhoej"><meta property="og:type" content="article"><meta property="og:site_name" content="Kuse AI"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="隨機抽題測驗網站"><meta name="twitter:description" content="隨機抽題測驗網站"><meta name="twitter:site" content="@kuseHQ">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#4f46e5">
@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="隨機抽題測驗">
 <meta name="format-detection" content="telephone=no">
-<title>專案管理 大會考抽題測驗 - Kuse AI</title>
+<title>隨機抽題測驗網站</title>
 <style>
 :root{
   --bg:#f4f6fb; --card:#ffffff; --ink:#1f2430; --muted:#6b7280; --line:#e6e8f0;
@@ -266,7 +266,7 @@ kbd{background:#eef0f8;border:1px solid #d6d9e6;border-bottom-width:2px;border-r
   #btnUseBuiltin{width:100%}
   .actions .btn{width:100%}
 }
-</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"專案管理 大會考抽題測驗 - Kuse AI","description":"專案管理 大會考抽題測驗","url":"https://pages.kusesite.com/8xhfngwbhoej","author":{"@type":"Organization","name":"Kuse AI"},"publisher":{"@type":"Organization","name":"Kuse AI","url":"https://www.kuse.ai"},"inLanguage":"en","alternateName":"專案管理 大會考抽題測驗"}</script><style>
+</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"隨機抽題測驗網站","description":"隨機抽題測驗網站","url":"https://pages.kusesite.com/8xhfngwbhoej","author":{"@type":"Organization","name":"Kuse AI"},"publisher":{"@type":"Organization","name":"Kuse AI","url":"https://www.kuse.ai"},"inLanguage":"en","alternateName":"隨機抽題測驗網站"}</script><style>
 .submit-overlay{position:fixed;inset:0;z-index:99999;background:rgba(15,23,42,.56);display:flex;align-items:center;justify-content:center;padding:18px}
 .submit-overlay.hidden{display:none!important}
 .submit-dialog{width:min(100%,420px);background:#fff;border-radius:18px;padding:26px;box-shadow:0 20px 60px #0004;color:#172033}
@@ -279,6 +279,17 @@ kbd{background:#eef0f8;border:1px solid #d6d9e6;border-bottom-width:2px;border-r
 #submitCancel:focus-visible{outline:2px solid #4f46e5;outline-offset:2px}
 #submitConfirm{background:#4f46e5;border-color:#4f46e5;color:#fff!important;-webkit-text-fill-color:#fff}
 </style>
+<style>
+.exam-config{margin-top:16px;padding:17px;border:1px solid #dfe3f2;background:#fafbff;border-radius:14px}
+.exam-config-title{font-size:16px;font-weight:800;margin-bottom:11px}
+.exam-config-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.exam-config-grid label{font-size:13px;font-weight:700;color:#475569;display:flex;flex-direction:column;gap:5px}
+.exam-config-grid input{width:100%;min-width:0;border:1.5px solid #cbd5e1;background:white;color:#1f2430;border-radius:10px;padding:11px;font-size:16px;font-family:inherit}
+.exam-config-grid input:focus{outline:2px solid #a5b4fc;outline-offset:1px}
+.exam-config-help{font-size:12px;color:#64748b;margin-top:10px}
+.countdown .big{min-width:66px;text-align:center}
+@media(max-width:640px){.exam-config-grid{grid-template-columns:1fr}.exam-config{padding:13px}.countdown .big{font-size:24px}}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -286,12 +297,20 @@ kbd{background:#eef0f8;border:1px solid #d6d9e6;border-bottom-width:2px;border-r
   <!-- ============ SETUP / HOME ============ -->
   <section id="home" class="card hero">
     <span class="badge">拖放 PDF 自動出題 · 內建 534 題</span>
-    <h1>專案管理 大會考抽題測驗</h1>
+    <h1>隨機抽題測驗網站</h1>
     <p class="sub">拖入題庫 PDF 立即出題 · 即時對答案 · 自動整理錯題本</p>
 
-    <div class="countdown">
+    <div class="exam-config" aria-label="考試資訊設定">
+      <div class="exam-config-title">📅 考試資訊與網路校時倒數</div>
+      <div class="exam-config-grid">
+        <label>考試名稱<input id="examNameInput" type="text" maxlength="80" placeholder="例如：專案管理大會考"></label>
+        <label>考試日期與時間（台灣時間）<input id="examDateInput" type="datetime-local" step="60"></label>
+      </div>
+      <div class="exam-config-help">設定會儲存在此瀏覽器。倒數依網路校時，不採用裝置自行設定的日期。</div>
+    </div>
+    <div class="countdown" aria-live="polite">
       <div class="big" id="cdDays">—</div>
-      <div class="txt">天后考試（<b>2026/10/22</b>）<br><span id="cdNote"></span></div>
+      <div class="txt"><b id="examDisplayName">專案管理大會考</b><br><span id="examDisplayDate">2026/10/22 09:00（台灣時間）</span><br><span id="cdNote">正在取得網路時間…</span></div>
     </div>
 
     <div class="dropzone" id="dropZone">
@@ -314,7 +333,9 @@ kbd{background:#eef0f8;border:1px solid #d6d9e6;border-bottom-width:2px;border-r
           <button data-c="50">50 題</button>
           <button data-c="100">100 題</button>
           <button data-c="all">全部</button>
+          <button data-c="custom">自訂題數</button>
         </div>
+        <div id="customCountPanel" class="hidden" style="margin-top:10px"><label for="customCountInput" class="ct">請輸入 1～<span id="customMax">534</span> 題</label><input id="customCountInput" type="number" min="1" max="534" step="1" value="35" inputmode="numeric" style="display:block;width:100%;max-width:230px;border:1.5px solid #cbd5e1;border-radius:10px;padding:10px 12px;font-size:16px;margin-top:6px"><div id="customCountError" class="ct" role="status"></div></div>
       </div>
       <div class="setrow">
         <div class="setlabel">選項順序</div>
@@ -346,7 +367,8 @@ kbd{background:#eef0f8;border:1px solid #d6d9e6;border-bottom-width:2px;border-r
       <button class="btn btn-ghost hidden" id="btnResume">繼續上一輪（剩 <span id="resumeLeft">0</span> 題）</button>
       <button class="btn btn-ghost hidden" id="btnWrongOnly">只練錯題（<span id="wrongCnt">0</span>）</button>
       <button class="btn btn-ghost hidden" id="btnWrongBook">查看錯題本</button>
-      <button class="btn btn-danger-ghost hidden" id="btnReset">清除紀錄</button>
+      <button class="btn btn-danger-ghost hidden" id="btnClearWrong">手動清空錯題本</button>
+      <button class="btn btn-danger-ghost hidden" id="btnReset">清除作答與抽題紀錄</button>
     </div>
 
     <p class="hint">
@@ -437,6 +459,7 @@ kbd{background:#eef0f8;border:1px solid #d6d9e6;border-bottom-width:2px;border-r
       <button class="chip on" data-f="wrong">只看答錯</button>
       <button class="chip" data-f="flag">只看標記</button>
       <button class="chip" data-f="all">全部題目</button>
+      <button class="btn btn-danger-ghost" id="btnClearWrongBook" style="padding:8px 14px;font-size:14px">清空錯題本</button>
     </div>
     <div class="wlist" id="bookList" style="margin-top:12px"></div>
   </section>
@@ -481,7 +504,7 @@ const LETTERS = ['A','B','C','D'];
 let KEY='pm534_rand_v1';
 function defState(){
   return {answers:{},flags:{},mode:'random',list:[],order:[],cur:0,pool:[],
-    perms:{},newCycle:false,examSelected:false,
+    perms:{},newCycle:false,examSelected:false,wrongSaved:{},wrongMigrated:false,
     settings:{count:20,shuffleOpt:true,noRepeat:true,quizMode:'practice'}};
 }
 let S=load();
@@ -493,6 +516,8 @@ function load(){
       d.list=r.list||[]; d.order=r.order||[]; d.cur=r.cur||0;
       d.pool=r.pool||[]; d.perms=r.perms||{}; d.newCycle=!!r.newCycle; d.examSelected=!!r.examSelected;
       d.settings=Object.assign(d.settings, r.settings||{});
+      d.wrongSaved=r.wrongSaved||{}; d.wrongMigrated=!!r.wrongMigrated;
+
       return d;
     }
   }catch(e){}
@@ -508,6 +533,15 @@ function setBank(arr,id,name){
   N_TOTAL=ALLN.length;
   KEY=(id==='builtin')?'pm534_rand_v1':('pmquiz_'+id);
   S=load();
+  if(!S.wrongMigrated){
+    Object.keys(S.answers).forEach(n=>{
+      const a=S.answers[n], d=byN[n]; if(!a||!d)return;
+      const oldPerm=S.perms[n]||[0,1,2,3];
+      const cl=LETTERS[oldPerm.indexOf(LETTERS.indexOf(d.a))];
+      if(a.sel!==cl) S.wrongSaved[n]={sel:a.sel};
+    });
+    S.wrongMigrated=true; save();
+  }
   if(!S.pool.length && !S.order.length){ S.pool=ALLN.slice(); save(); }
   renderBank();
 }
@@ -528,7 +562,8 @@ function correctText(n){ const d=byN[n]; return d.o[LETTERS.indexOf(d.a)]; }
 function isRight(n){ const a=S.answers[n]; return !!a && a.sel===correctLetter(n); }
 function answeredCount(){ return Object.keys(S.answers).length; }
 function rightCount(){ return DATA.filter(d=>isRight(d.n)).length; }
-function wrongList(){ return DATA.filter(d=>S.answers[d.n] && !isRight(d.n)).map(d=>d.n); }
+function wrongList(){ return DATA.filter(d=>S.wrongSaved[d.n]).map(d=>d.n); }
+function rememberWrong(n){ if(S.answers[n] && !isRight(n)) S.wrongSaved[n]={sel:S.answers[n].sel}; }
 function flagCount(){ return Object.keys(S.flags).filter(k=>S.flags[k]).length; }
 
 /* ---------- draw a round ---------- */
@@ -557,7 +592,9 @@ function drawRound(){
 function startWrong(){
   const wl=wrongList();
   if(!wl.length){ alert('目前沒有答錯的題目 🎉'); return; }
-  S.order=wl.slice(); S.list=wl.slice(); S.cur=0; S.mode='wrong'; S.newCycle=false;
+  S.answers={}; S.perms={}; S.submitted=false; S.examSelected=false;
+  wl.forEach(n=>{ S.perms[n]=S.settings.shuffleOpt?shuffle([0,1,2,3]):[0,1,2,3]; });
+  S.order=shuffle(wl.slice()); S.list=S.order.slice(); S.cur=0; S.mode='wrong'; S.newCycle=false;
   save(); show('quiz'); renderQuiz();
 }
 function resume(){
@@ -571,7 +608,11 @@ function resume(){
 function renderHome(){
   document.querySelectorAll('#segMode button').forEach(b=>b.classList.toggle('on',(S.settings.quizMode||'practice')===b.dataset.m));
   $('btnDraw').textContent=S.settings.quizMode==='exam'?'開始考試':'開始練習';
-  document.querySelectorAll('#segCount button').forEach(b=>b.classList.toggle('on', String(S.settings.count)===b.dataset.c));
+  document.querySelectorAll('#segCount button').forEach(b=>b.classList.toggle('on', (S.settings.count==='custom'?'custom':String(S.settings.count))===b.dataset.c));
+  $('customCountPanel').classList.toggle('hidden',S.settings.count!=='custom');
+  $('customMax').textContent=N_TOTAL; $('customCountInput').max=N_TOTAL;
+  if(document.activeElement!==$('customCountInput')) $('customCountInput').value=S.settings.customCount||35;
+  validateCustomCount();
   document.querySelectorAll('#segOpt button').forEach(b=>b.classList.toggle('on', (S.settings.shuffleOpt?'1':'0')===b.dataset.v));
   document.querySelectorAll('#segRep button').forEach(b=>b.classList.toggle('on', (S.settings.noRepeat?'1':'0')===b.dataset.v));
 
@@ -586,14 +627,10 @@ function renderHome(){
   $('resumeLeft').textContent=left;
   $('btnWrongOnly').classList.toggle('hidden', wl.length===0);
   $('btnWrongBook').classList.toggle('hidden', (wl.length===0 && flagCount()===0));
-  $('btnReset').classList.toggle('hidden', done===0);
+  $('btnReset').classList.toggle('hidden', done===0 && S.order.length===0);
+  $('btnClearWrong').classList.toggle('hidden', wl.length===0);
 
-  const exam=new Date(2026,9,22);
-  const now=new Date();
-  const today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
-  const days=Math.round((exam-today)/86400000);
-  $('cdDays').textContent = days>0 ? days : (days===0?'今天!':'已考完');
-  $('cdNote').textContent = days>0 ? ('今天 '+(today.getMonth()+1)+'/'+today.getDate()+'，還有 '+days+' 天可以複習') : '';
+  if (window.updateTrustedExamCountdown) window.updateTrustedExamCountdown();
 }
 
 /* ---------- 題號導覽 ---------- */
@@ -676,7 +713,7 @@ function renderQuiz(){
 }
 function answer(L){
   const n=S.list[S.cur]; if(S.answers[n] && S.mode!=='exam') return;
-  S.answers[n]={sel:L}; save(); renderQuiz();
+  S.answers[n]={sel:L}; if(S.mode!=='exam')rememberWrong(n); save(); renderQuiz();
 }
 function nextQ(){ if(S.cur>=S.list.length-1){ finish(); return; } S.cur++; save(); renderQuiz(); }
 function prevQ(){ if(S.cur>0){ S.cur--; save(); renderQuiz(); } }
@@ -692,6 +729,7 @@ function finish(){
 function completeRound(){
   $('submitOverlay').classList.add('hidden');
   S.submitted=true;
+  if(S.mode==='exam')S.order.forEach(n=>rememberWrong(n));
   save();
   renderResult();
   show('result');
@@ -729,8 +767,8 @@ function renderResult(){
   }
   $('btnRedoWrong').classList.toggle('hidden', wrongList().length===0);
 }
-function wrongItem(n){
-  const d=byN[n]; const sel=S.answers[n]?S.answers[n].sel:'（未作答）'; const cl=correctLetter(n);
+function wrongItem(n,fromSaved=false){
+  const d=byN[n]; const sel=fromSaved?(S.wrongSaved[n]?.sel||'（歷史錯題）'):(S.answers[n]?S.answers[n].sel:'（未作答）'); const cl=fromSaved?d.a:correctLetter(n);
   const w=document.createElement('div'); w.className='witem';
   w.innerHTML =
     '<div class="wq"><span class="wn">#'+d.n+'</span><p class="wt"></p></div>'+
@@ -751,12 +789,12 @@ document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{
 function renderBook(){
   const box=$('bookList'); box.innerHTML='';
   let arr;
-  if(bookFilter==='wrong') arr=DATA.filter(d=>S.answers[d.n]&&!isRight(d.n));
+  if(bookFilter==='wrong') arr=DATA.filter(d=>S.wrongSaved[d.n]);
   else if(bookFilter==='flag') arr=DATA.filter(d=>S.flags[d.n]);
   else arr=DATA;
   if(!arr.length){ box.innerHTML='<div class="card empty"><div class="big">📭</div><p>這裡還沒有題目。</p></div>'; return; }
   arr.forEach(d=>{
-    if(bookFilter==='wrong'){ box.appendChild(wrongItem(d.n)); return; }
+    if(bookFilter==='wrong'){ box.appendChild(wrongItem(d.n,true)); return; }
     const w=document.createElement('div'); w.className='witem';
     const ans=S.answers[d.n]; const cl=correctLetter(d.n);
     w.innerHTML='<div class="wq"><span class="wn">#'+d.n+'</span><p class="wt"></p></div>'+
@@ -774,22 +812,51 @@ $('segMode').querySelectorAll('button').forEach(b=>b.onclick=()=>{
   S.settings.quizMode=b.dataset.m; save(); renderHome();
 });
 $('segCount').querySelectorAll('button').forEach(b=>b.onclick=()=>{
-  S.settings.count = (b.dataset.c==='all') ? 'all' : Number(b.dataset.c);
+  S.settings.count = (b.dataset.c==='all'||b.dataset.c==='custom') ? b.dataset.c : Number(b.dataset.c);
   save(); renderHome();
 });
 $('segOpt').querySelectorAll('button').forEach(b=>b.onclick=()=>{ S.settings.shuffleOpt = b.dataset.v==='1'; save(); renderHome(); });
 $('segRep').querySelectorAll('button').forEach(b=>b.onclick=()=>{ S.settings.noRepeat = b.dataset.v==='1'; save(); renderHome(); });
 
 /* ---------- buttons ---------- */
-$('btnDraw').onclick=drawRound;
+function validateCustomCount(){
+  const v=Number(S.settings.customCount||0);
+  const ok=Number.isInteger(v)&&v>=1&&v<=N_TOTAL;
+  $('customCountError').textContent=ok?'可抽 '+v+' 題（抽完一輪才重複模式仍受剩餘題數限制）':'請輸入 1～'+N_TOTAL+' 之間的整數';
+  $('customCountError').style.color=ok?'#0f9d63':'#dc2626';
+  $('btnDraw').disabled=S.settings.count==='custom'&&!ok;
+  return ok;
+}
+$('customCountInput').addEventListener('input',()=>{
+  S.settings.customCount=$('customCountInput').value;
+  validateCustomCount();
+  if(validateCustomCount()){S.settings.count='custom';save();}
+});
+function startConfiguredRound(){
+  if(S.settings.count==='custom'){
+    if(!validateCustomCount())return;
+    S.settings.count=Number(S.settings.customCount);
+    drawRound();
+    S.settings.count='custom'; save();
+  }else drawRound();
+}
+function clearWrongBook(){
+  if(!wrongList().length)return;
+  if(!confirm('確定要永久清空所有累積錯題嗎？此動作無法復原，其他作答紀錄會保留。'))return;
+  S.wrongSaved={}; S.wrongMigrated=true; save(); renderHome();
+  if(!$('book').classList.contains('hidden'))renderBook();
+}
+$('btnClearWrong').onclick=clearWrongBook;
+$('btnClearWrongBook').onclick=clearWrongBook;
+$('btnDraw').onclick=startConfiguredRound;
 $('btnResume').onclick=resume;
 $('btnWrongOnly').onclick=startWrong;
 $('btnWrongBook').onclick=()=>{ renderBook(); show('book'); };
-$('btnReset').onclick=()=>{ if(confirm('確定要清除所有作答紀錄嗎？此動作無法復原。')){ S=defState(); S.pool=ALLN.slice(); save(); renderHome(); } };
+$('btnReset').onclick=()=>{ if(confirm('確定要清除作答與抽題進度嗎？累積錯題本會保留，只有按「清空錯題本」才會刪除錯題。')){ const saved=S.wrongSaved,settings=S.settings,flags=S.flags; S=defState(); S.wrongSaved=saved; S.wrongMigrated=true; S.settings=settings; S.flags=flags; S.pool=ALLN.slice(); save(); renderHome(); } };
 $('btnNext').onclick=nextQ;
 $('btnPrev').onclick=prevQ;
 $('btnFinish').onclick=finish;
-$('btnDrawAgain').onclick=drawRound;
+$('btnDrawAgain').onclick=startConfiguredRound;
 $('btnRedoWrong').onclick=startWrong;
 $('btnHome2').onclick=()=>{ renderHome(); show('home'); };
 $('btnHome3').onclick=()=>{ renderHome(); show('home'); };
@@ -1227,5 +1294,73 @@ try{ pmWireDrop(); }catch(e){}
     <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="kuse-watermark__logo"><path d="M32.1961 16.9236C32.1961 27.7003 25.7517 30.9712 15.8137 31.9262C5.87574 32.8812 0.340191 24.4202 0.0108066 15.2567C-0.318577 6.09311 6.92065 -1.50151 16.3932 0.254065C25.8657 2.00964 32.1961 6.14701 32.1961 16.9236Z" fill="currentColor"/></svg>
     <span>Made with Kuse</span>
   </div>
-</div></body>
+</div><script>
+/* 考試資訊與可信時間：只使用 HTTPS 網路時間，不使用本機 Date.now() 當時間來源。 */
+(function(){
+  'use strict';
+  const KEY='esg_exam_schedule_v1';
+  const DEFAULT={name:'專案管理大會考',date:'2026-10-22T09:00'};
+  const $=id=>document.getElementById(id);
+  let config={...DEFAULT};
+  try {const x=JSON.parse(localStorage.getItem(KEY)||'null');if(x&&typeof x==='object'){
+    if(typeof x.name==='string')config.name=x.name.slice(0,80);
+    if(typeof x.date==='string'&&/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(x.date))config.date=x.date;
+  }}catch(e){}
+  const name=$('examNameInput'),date=$('examDateInput');
+  if(!name||!date)return;
+  name.value=config.name;date.value=config.date;
+  let trustedEpoch=null, anchorPerf=0, lastVerifiedPerf=0, syncing=false;
+  const taiwanDate=()=>new Intl.DateTimeFormat('zh-TW',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
+  function render(){
+    $('examDisplayName').textContent=config.name.trim()||'未命名考試';
+    $('examDisplayDate').textContent=config.date.replace('T',' ').replaceAll('-','/')+'（台灣時間）';
+    const target=Date.parse(config.date+':00+08:00');
+    if(!Number.isFinite(target)){$('cdDays').textContent='—';$('cdNote').textContent='請設定有效考試日期';return;}
+    if(trustedEpoch===null){$('cdDays').textContent='—';$('cdNote').textContent='等待網路校時，無法驗證時不使用裝置時間';return;}
+    // performance.now 是單調計時器，手動更改系統時鐘不會改變已校時的倒數。
+    const elapsed=performance.now()-anchorPerf;
+    const now=trustedEpoch+elapsed;
+    const diff=target-now;
+    if(diff<=0){$('cdDays').textContent='已到';$('cdNote').textContent='考試時間已到或已結束 · 網路校時';return;}
+    const days=Math.floor(diff/86400000);
+    const hours=Math.floor(diff%86400000/3600000);
+    const mins=Math.floor(diff%3600000/60000);
+    const secs=Math.floor(diff%60000/1000);
+    $('cdDays').textContent=days;
+    $('cdNote').textContent='天後考試 · 剩 '+hours+' 小時 '+mins+' 分 '+secs+' 秒（網路校時）';
+  }
+  window.updateTrustedExamCountdown=render;
+  function save(){config.name=name.value;config.date=date.value;try{localStorage.setItem(KEY,JSON.stringify(config));}catch(e){}render();}
+  name.addEventListener('input',save);date.addEventListener('change',save);date.addEventListener('input',save);
+  async function getNetworkTime(){
+    const endpoints=[
+      {url:'https://worldtimeapi.org/api/timezone/Asia/Taipei',parse:x=>Date.parse(x.datetime)},
+      {url:'https://timeapi.io/api/time/current/zone?timeZone=Asia%2FTaipei',parse:x=>Date.parse(x.dateTime+'+08:00')}
+    ];
+    for(const ep of endpoints){
+      const ctrl=new AbortController();const timeout=setTimeout(()=>ctrl.abort(),6500);
+      const start=performance.now();
+      try{
+        const r=await fetch(ep.url,{cache:'no-store',signal:ctrl.signal});
+        if(!r.ok)throw Error('HTTP '+r.status);
+        const data=await r.json();const epoch=ep.parse(data);const end=performance.now();
+        if(!Number.isFinite(epoch))throw Error('Invalid time');
+        return {epoch:epoch+(end-start)/2,perf:(start+end)/2};
+      }catch(e){}finally{clearTimeout(timeout);}
+    }
+    throw Error('No verified time source');
+  }
+  async function sync(){
+    if(syncing)return;syncing=true;
+    try{const t=await getNetworkTime();trustedEpoch=t.epoch;anchorPerf=t.perf;lastVerifiedPerf=performance.now();}
+    catch(e){
+      // 超過 30 分鐘沒有成功校時，停止使用舊時間，避免錯誤倒數。
+      if(trustedEpoch===null||performance.now()-lastVerifiedPerf>30*60*1000)trustedEpoch=null;
+    }finally{syncing=false;render();}
+  }
+  render();sync();setInterval(render,1000);setInterval(sync,5*60*1000);
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)sync();});
+})();
+</script>
+</body>
 </html>
